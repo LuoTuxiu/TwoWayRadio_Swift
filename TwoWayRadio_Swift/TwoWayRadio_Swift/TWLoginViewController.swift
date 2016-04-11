@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 class TWLoginViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,6 +16,7 @@ class TWLoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationItem.rightBarButtonItem =  UIBarButtonItem.init(title: "设置服务器", style: .Plain, target: self, action:#selector(TWLoginViewController.setServer))
+        
         
     }
 
@@ -32,11 +33,56 @@ class TWLoginViewController: UIViewController {
         let cancelAction = UIAlertAction.init(title: "取消", style: .Cancel) { (UIAlertAction) in
             print("cacel")
         }
-        let doneAction = UIAlertAction.init(title: "确定", style: .Default) { (UIAlertAction) in
+        
+        let doneAction = UIAlertAction.init(title: "保存", style: .Default) { (UIAlertAction) in
             print("done")
 //            print(alertVc.textFields)
+            let realm =  try! Realm()
+            let results = realm.objects(TWAccountModel)
+            var account:TWAccountModel?
+            if results.count == 0{
+                account  = TWAccountModel()
+                try!realm.write({
+                    realm.add(account!)
+                })
+                
+            }else{
+                account = results.first
+            }
+            
+            
             for textfield in alertVc.textFields!{
                 print("the content is \(textfield.text) and the tag is \(textfield.tag)")
+                switch textfield.tag {
+                case 1:
+                    // 获取默认的 Realm 数据库
+                    if !textfield.text!.isEmpty
+                    {
+                        try!realm.write({
+                            account!.serverIp =  textfield.text!
+                            
+                        })
+                    }
+                case 2:
+                    // 获取默认的 Realm 数据库
+                    if !textfield.text!.isEmpty
+                    {
+                        try!realm.write({
+                            
+
+                            account!.serverPort  = textfield.text!
+                            
+                            
+                        })
+                    }
+                default:
+                    break
+                    
+                }
+                
+                
+                
+                
             }
             
         }
@@ -44,12 +90,31 @@ class TWLoginViewController: UIViewController {
         alertVc.addAction(cancelAction)
         alertVc.addAction(doneAction)
         
+        let realm =  try! Realm()
+        let results = realm.objects(TWAccountModel)
+        var account:TWAccountModel?
+        if results.count != 0{
+            account = results.first
+        }
+
+        
         alertVc.addTextFieldWithConfigurationHandler { (UITextField) in
-            UITextField.placeholder = "请填写服务器地址"
+            if results.count != 0{
+                account = results.first
+                UITextField.placeholder = "服务器地址:".stringByAppendingString((account?.serverIp)!)
+            }else{
+                UITextField.placeholder = "请填写服务器地址"
+            }
             UITextField.tag  = 1
         }
         alertVc.addTextFieldWithConfigurationHandler { (UITextField) in
-            UITextField.placeholder = "请填写服务器端口号"
+            if results.count != 0{
+                account = results.first
+                UITextField.placeholder = "服务器端口号:".stringByAppendingString((account?.serverPort)!)
+            }else{
+                UITextField.placeholder = "请填写服务器端口号"
+            }
+        
             UITextField.tag = 2
         }
 //        self.presentViewController(alertVc, animated: ) {
