@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+
+        
+        self.window =  UIWindow()
+        self.window!.backgroundColor =  UIColor.whiteColor()
+        
+        let homeVc  = TWLoginViewController();
+        let homeNavVc = UINavigationController(rootViewController:homeVc)
+//        self.window!.rootViewController =  TWTabViewController()
+        self.window!.rootViewController =  homeNavVc
+        self.window!.makeKeyAndVisible()
+
         return true
     }
 
