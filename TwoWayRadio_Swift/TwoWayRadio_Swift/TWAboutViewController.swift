@@ -1,32 +1,19 @@
 //
-//  TWTabViewController.swift
+//  TWAboutViewController.swift
 //  TwoWayRadio_Swift
 //
-//  Created by LuoTuxiu on 16/4/11.
+//  Created by LuoTuxiu on 16/4/13.
 //  Copyright © 2016年 sd. All rights reserved.
 //
 
 import UIKit
 
-class TWTabViewController: UITabBarController {
+class TWAboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "关于"
         // Do any additional setup after loading the view.
-        self.view.backgroundColor  = UIColor.whiteColor()
-        
-        let firstVc = TWHomeViewController()
-        let firstNav = UINavigationController(rootViewController:firstVc)
-        firstVc.view.backgroundColor = UIColor.redColor()
-        
-        
-        let secondVc = TWSettingViewController()
-        secondVc.view.backgroundColor = UIColor.greenColor()
-        let  secondNav = UINavigationController(rootViewController:secondVc)
-        
-        self.viewControllers = [firstNav,secondNav]
-     
     }
 
     override func didReceiveMemoryWarning() {

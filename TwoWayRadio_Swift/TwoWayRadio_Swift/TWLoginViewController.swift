@@ -84,6 +84,7 @@ class TWLoginViewController: UIViewController {
                 
                 
             }
+            MBProgressHUD.showSuccess("保存成功", toView: self.view)
             
         }
         
