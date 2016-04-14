@@ -4,4 +4,6 @@ use_frameworks!
 target 'TwoWayRadio_Swift' do
 
 pod 'RealmSwift'
+pod 'Alamofire', '~> 3.3'
+
 end

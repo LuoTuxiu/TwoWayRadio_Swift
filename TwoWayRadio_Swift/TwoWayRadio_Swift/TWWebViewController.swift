@@ -1,32 +1,26 @@
 //
-//  TWTabViewController.swift
+//  TWWebViewController.swift
 //  TwoWayRadio_Swift
 //
-//  Created by LuoTuxiu on 16/4/11.
+//  Created by LuoTuxiu on 16/4/14.
 //  Copyright © 2016年 sd. All rights reserved.
 //
 
 import UIKit
 
-class TWTabViewController: UITabBarController {
+class TWWebViewController: UIViewController,UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let webView = UIWebView.init(frame: self.view.frame)
+        
+        let request = NSURLRequest.init(URL: NSURL.init(string: "www.baidu.com")!)
+        webView.loadRequest(request)
+        webView.delegate =  self
+        self.view.addSubview(webView)
+        
+        
         // Do any additional setup after loading the view.
-        self.view.backgroundColor  = UIColor.whiteColor()
-        
-        let firstVc = TWHomeViewController()
-        let firstNav = UINavigationController(rootViewController:firstVc)
-//        firstVc.view.backgroundColor = UIColor.redColor()
-        
-        
-        let secondVc = TWSettingViewController()
-//        secondVc.view.backgroundColor = UIColor.greenColor()
-        let  secondNav = UINavigationController(rootViewController:secondVc)
-        
-        self.viewControllers = [firstNav,secondNav]
-     
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +28,17 @@ class TWTabViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        print("did")
+    }
 
+    func webViewDidFinishLoad(webView: UIWebView) {
+        print("finish")
+    }
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print(error)
+    }
     /*
     // MARK: - Navigation
 

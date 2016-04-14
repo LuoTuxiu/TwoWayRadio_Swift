@@ -14,4 +14,10 @@ class TWSettingModel: NSObject {
     var detailTitle:String?
     
     
+    init(imageName:String,title:String,detailTitle:String) {
+        self.imageName = imageName
+        self.title = title
+        self.detailTitle  = detailTitle
+    }
+  
 }

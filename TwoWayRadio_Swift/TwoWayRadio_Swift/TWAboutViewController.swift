@@ -8,11 +8,18 @@
 
 import UIKit
 
-class TWAboutViewController: UIViewController {
+class TWAboutViewController: YSCommonController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "关于"
+        self.commonSetupTableView(UITableViewStyle.Grouped)
+//        let aboutHeaderView = TWAboutHeaderView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.width  , height: self.view.height))
+        let aboutHeaderView = NSBundle.mainBundle().loadNibNamed("TWAboutHeaderView", owner: nil, options: nil).first as! TWAboutHeaderView
+        aboutHeaderView.frame = CGRect.init(x: 0, y: 0, width: self.view.width  , height: 200)
+        self.tableView.tableHeaderView = aboutHeaderView
+        self.setupGroup0()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +28,23 @@ class TWAboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func setupGroup0() {
+        var group = self.addGroup()
+        var about = YSArrowItem.init(title: "官方网站", rightImage:"")
+        group.items =  [about]
 
+        
+        
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let group = groups()[indexPath.row]
+        let  webViewVc = TWWebViewController()
+        self.navigationController?.pushViewController(webViewVc, animated: true)
+        
+        
+    }
     /*
     // MARK: - Navigation
 

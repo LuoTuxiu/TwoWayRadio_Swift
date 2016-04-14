@@ -21,13 +21,11 @@ class TWSettingViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        var about = TWSettingModel()
-        about.title =  "关于"
+        var about = TWSettingModel.init(imageName: "MoreAbout" , title: "关于", detailTitle: "")
         
-        var support = TWSettingModel()
-        support.title =  "支持"
+        var support = TWSettingModel.init(imageName: "recommendToAppstore", title: "支持", detailTitle: "")
         
-        groups = groups + [about,support]
+        groups = [about,support]
         
         
         self.tableView.reloadData()
@@ -60,6 +58,7 @@ class TWSettingViewController: UITableViewController {
         }
         // Configure the cell...
         cell!.textLabel?.text = group.title
+        cell!.imageView?.image = UIImage.init(imageLiteral: group.imageName!)
         return cell!
     }
  
@@ -67,7 +66,8 @@ class TWSettingViewController: UITableViewController {
         debugPrint(indexPath)
         if indexPath.row == 0 {
             let aboutVc = TWAboutViewController()
-            self.navigationController?.pushViewController(aboutVc, animated: false)
+            aboutVc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(aboutVc, animated: true)
             
         }
     }
