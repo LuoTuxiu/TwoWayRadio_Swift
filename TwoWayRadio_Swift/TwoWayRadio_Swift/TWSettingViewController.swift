@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class TWSettingViewController: UITableViewController {
 
     var groups = [TWSettingModel]()
@@ -21,13 +21,23 @@ class TWSettingViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        var about = TWSettingModel.init(imageName: "MoreAbout" , title: "关于", detailTitle: "")
+        var about = TWSettingModel.init(imageName: "MoreAbout" , title: "关于应用", detailTitle: "")
         
-        var support = TWSettingModel.init(imageName: "recommendToAppstore", title: "支持", detailTitle: "")
+        var support = TWSettingModel.init(imageName: "recommendToAppstore", title: "支持我们", detailTitle: "")
         
         groups = [about,support]
-        
-        
+//        Alamofire.request(.GET, "https://httpbin.org/get")
+        Alamofire.request(.GET, "www.baidu.com", parameters: ["foo": "bar"])
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
         self.tableView.reloadData()
     }
 
@@ -69,6 +79,10 @@ class TWSettingViewController: UITableViewController {
             aboutVc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(aboutVc, animated: true)
             
+        }
+        else{
+            let appStore = "itms-apps://itunes.apple.com/cn/app/id1048837125?mt=8"
+            UIApplication.sharedApplication().openURL(NSURL.init(fileURLWithPath: appStore))
         }
     }
 

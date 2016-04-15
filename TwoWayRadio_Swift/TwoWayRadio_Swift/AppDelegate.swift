@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let infoDic = NSBundle.mainBundle().infoDictionary
         print(infoDic)
         
+        //友盟统计
+        MobClick.startWithAppkey("563edf19e0f55ae9e0001f06")
         
         self.window =  UIWindow()
         self.window!.backgroundColor =  UIColor.whiteColor()

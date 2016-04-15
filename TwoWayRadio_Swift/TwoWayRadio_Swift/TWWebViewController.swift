@@ -14,11 +14,12 @@ class TWWebViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
         let webView = UIWebView.init(frame: self.view.frame)
         
-        let request = NSURLRequest.init(URL: NSURL.init(string: "www.baidu.com")!)
-        webView.loadRequest(request)
-        webView.delegate =  self
+        let request = NSURLRequest.init(URL: NSURL.init(string: "http://www.tce.com.sg")!)
         self.view.addSubview(webView)
         
+        webView.delegate =  self
+        
+        webView.loadRequest(request)
         
         // Do any additional setup after loading the view.
     }
