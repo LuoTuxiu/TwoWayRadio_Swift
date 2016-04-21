@@ -11,6 +11,9 @@
 		F552023A1CBF937000923C39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F55202391CBF937000923C39 /* Info.plist */; };
 		F55FD4DE1CB90A74001E300C /* TwoWayRadio_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55FD4DD1CB90A74001E300C /* TwoWayRadio_SwiftUITests.swift */; };
 		F595C40E1CC0B59100D8485A /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F595C40B1CC0B59100D8485A /* libMobClickLibrary.a */; };
+		F59F82AC1CC8F0D60080D0CB /* TWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F82AB1CC8F0D60080D0CB /* TWHomeViewController.swift */; };
+		F59F82AE1CC8F1880080D0CB /* TWHomeAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F82AD1CC8F1880080D0CB /* TWHomeAccountView.swift */; };
+		F59F82B01CC8F1A20080D0CB /* TWHomeAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59F82AF1CC8F1A20080D0CB /* TWHomeAccountView.xib */; };
 		F5A40A751CBF8645009A047D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A361CBF8645009A047D /* AppDelegate.swift */; };
 		F5A40A761CBF8645009A047D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A40A371CBF8645009A047D /* Assets.xcassets */; };
 		F5A40A771CBF8645009A047D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A40A381CBF8645009A047D /* LaunchScreen.storyboard */; };
@@ -19,7 +22,6 @@
 		F5A40A7B1CBF8645009A047D /* TWAboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A40A3E1CBF8645009A047D /* TWAboutHeaderView.xib */; };
 		F5A40A7C1CBF8645009A047D /* TWAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A3F1CBF8645009A047D /* TWAboutViewController.swift */; };
 		F5A40A7D1CBF8645009A047D /* TWAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A401CBF8645009A047D /* TWAccountModel.swift */; };
-		F5A40A7E1CBF8645009A047D /* TWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A411CBF8645009A047D /* TWHomeViewController.swift */; };
 		F5A40A7F1CBF8645009A047D /* TWLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A421CBF8645009A047D /* TWLoginViewController.swift */; };
 		F5A40A801CBF8645009A047D /* TWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A40A431CBF8645009A047D /* TWLoginViewController.xib */; };
 		F5A40A811CBF8645009A047D /* TWSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A40A451CBF8645009A047D /* TWSettingModel.swift */; };
@@ -79,6 +81,9 @@
 		F595C40B1CC0B59100D8485A /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		F595C40C1CC0B59100D8485A /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		F595C40D1CC0B59100D8485A /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		F59F82AB1CC8F0D60080D0CB /* TWHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWHomeViewController.swift; sourceTree = "<group>"; };
+		F59F82AD1CC8F1880080D0CB /* TWHomeAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWHomeAccountView.swift; sourceTree = "<group>"; };
+		F59F82AF1CC8F1A20080D0CB /* TWHomeAccountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWHomeAccountView.xib; sourceTree = "<group>"; };
 		F5A40A361CBF8645009A047D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A40A371CBF8645009A047D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5A40A391CBF8645009A047D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +92,6 @@
 		F5A40A3E1CBF8645009A047D /* TWAboutHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWAboutHeaderView.xib; sourceTree = "<group>"; };
 		F5A40A3F1CBF8645009A047D /* TWAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWAboutViewController.swift; sourceTree = "<group>"; };
 		F5A40A401CBF8645009A047D /* TWAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWAccountModel.swift; sourceTree = "<group>"; };
-		F5A40A411CBF8645009A047D /* TWHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWHomeViewController.swift; sourceTree = "<group>"; };
 		F5A40A421CBF8645009A047D /* TWLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWLoginViewController.swift; sourceTree = "<group>"; };
 		F5A40A431CBF8645009A047D /* TWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWLoginViewController.xib; sourceTree = "<group>"; };
 		F5A40A441CBF8645009A047D /* TwoWayRadio_Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TwoWayRadio_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -212,9 +216,76 @@
 			path = TwoWayRadio_SwiftUITests;
 			sourceTree = "<group>";
 		};
+		F595C4121CC0C39600D8485A /* TWHome */ = {
+			isa = PBXGroup;
+			children = (
+				F595C4131CC0C39600D8485A /* Controller */,
+				F595C4141CC0C39600D8485A /* Model */,
+				F595C4151CC0C39600D8485A /* View */,
+			);
+			path = TWHome;
+			sourceTree = "<group>";
+		};
+		F595C4131CC0C39600D8485A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F59F82AB1CC8F0D60080D0CB /* TWHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F595C4141CC0C39600D8485A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F595C4151CC0C39600D8485A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F59F82AD1CC8F1880080D0CB /* TWHomeAccountView.swift */,
+				F59F82AF1CC8F1A20080D0CB /* TWHomeAccountView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F595C4161CC0C39D00D8485A /* TWSetting */ = {
+			isa = PBXGroup;
+			children = (
+				F595C4171CC0C39D00D8485A /* Controller */,
+				F595C4181CC0C39D00D8485A /* Model */,
+				F595C4191CC0C39D00D8485A /* View */,
+			);
+			path = TWSetting;
+			sourceTree = "<group>";
+		};
+		F595C4171CC0C39D00D8485A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F595C4181CC0C39D00D8485A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F595C4191CC0C39D00D8485A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F5A40A351CBF8645009A047D /* TwoWayRadio_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F595C4161CC0C39D00D8485A /* TWSetting */,
+				F595C4121CC0C39600D8485A /* TWHome */,
 				F55202391CBF937000923C39 /* Info.plist */,
 				F5A40A361CBF8645009A047D /* AppDelegate.swift */,
 				F5A40A371CBF8645009A047D /* Assets.xcassets */,
@@ -224,7 +295,6 @@
 				F5A40A3E1CBF8645009A047D /* TWAboutHeaderView.xib */,
 				F5A40A3F1CBF8645009A047D /* TWAboutViewController.swift */,
 				F5A40A401CBF8645009A047D /* TWAccountModel.swift */,
-				F5A40A411CBF8645009A047D /* TWHomeViewController.swift */,
 				F5A40A421CBF8645009A047D /* TWLoginViewController.swift */,
 				F5A40A431CBF8645009A047D /* TWLoginViewController.xib */,
 				F5A40A441CBF8645009A047D /* TwoWayRadio_Swift-Bridging-Header.h */,
@@ -446,6 +516,7 @@
 			files = (
 				F5A40A801CBF8645009A047D /* TWLoginViewController.xib in Resources */,
 				F5A40A781CBF8645009A047D /* Main.storyboard in Resources */,
+				F59F82B01CC8F1A20080D0CB /* TWHomeAccountView.xib in Resources */,
 				F5A40A7B1CBF8645009A047D /* TWAboutHeaderView.xib in Resources */,
 				F5A40A761CBF8645009A047D /* Assets.xcassets in Resources */,
 				F5A40A771CBF8645009A047D /* LaunchScreen.storyboard in Resources */,
@@ -541,6 +612,7 @@
 				F5A40A881CBF8645009A047D /* DZCommonChangeFrameItem.m in Sources */,
 				F5A40A7A1CBF8645009A047D /* TWAboutHeaderView.swift in Sources */,
 				F5A40A911CBF8645009A047D /* YSDoubleEditItem.m in Sources */,
+				F59F82AC1CC8F0D60080D0CB /* TWHomeViewController.swift in Sources */,
 				F5A40A8A1CBF8645009A047D /* DZRightTitleItem.m in Sources */,
 				F5A40A871CBF8645009A047D /* YSCommonController.m in Sources */,
 				F5A40A7F1CBF8645009A047D /* TWLoginViewController.swift in Sources */,
@@ -549,7 +621,7 @@
 				F5A40A931CBF8645009A047D /* YSMoreItem.m in Sources */,
 				F5A40A8D1CBF8645009A047D /* YSCheckItem.m in Sources */,
 				F5A40A951CBF8645009A047D /* YSSwitchItem.m in Sources */,
-				F5A40A7E1CBF8645009A047D /* TWHomeViewController.swift in Sources */,
+				F59F82AE1CC8F1880080D0CB /* TWHomeAccountView.swift in Sources */,
 				F5A40A971CBF8645009A047D /* YSCommonGroup.m in Sources */,
 				F5A40A941CBF8645009A047D /* YSRemarkItem.m in Sources */,
 				F5A40A751CBF8645009A047D /* AppDelegate.swift in Sources */,

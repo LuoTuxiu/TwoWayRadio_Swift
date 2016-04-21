@@ -14,6 +14,13 @@ class TWHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "首页"
+        
+        let homeAccountView = NSBundle.mainBundle().loadNibNamed("TWHomeAccountView", owner:nil, options:nil).first as! TWHomeAccountView
+        homeAccountView.frame = self.view.frame
+        homeAccountView.y = 64 + 20
+        
+        self.view.addSubview(homeAccountView)
+        
         // Do any additional setup after loading the view.
     }
 

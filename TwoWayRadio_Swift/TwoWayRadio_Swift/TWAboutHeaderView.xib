@@ -14,7 +14,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号：1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8b-WI-Z1S">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applicationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Jsk-kE-dju">
@@ -23,7 +23,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwoWayRadio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zf-zr-UcV">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -42,12 +42,12 @@
                     <exclude reference="1Zf-zr-UcV"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="6Ct-Nd-Cd2"/>
-                    <exclude reference="J27-YG-NXR"/>
                     <exclude reference="5bs-wO-ffK"/>
                     <exclude reference="Ohu-jy-ueW"/>
                     <exclude reference="Jm4-eg-mYY"/>
                     <exclude reference="SP9-dV-0d2"/>
+                    <exclude reference="6Ct-Nd-Cd2"/>
+                    <exclude reference="J27-YG-NXR"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -57,12 +57,12 @@
                     <include reference="1Zf-zr-UcV"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="6Ct-Nd-Cd2"/>
-                    <include reference="J27-YG-NXR"/>
                     <include reference="5bs-wO-ffK"/>
                     <include reference="Ohu-jy-ueW"/>
                     <include reference="Jm4-eg-mYY"/>
                     <include reference="SP9-dV-0d2"/>
+                    <include reference="6Ct-Nd-Cd2"/>
+                    <include reference="J27-YG-NXR"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="8" y="224"/>

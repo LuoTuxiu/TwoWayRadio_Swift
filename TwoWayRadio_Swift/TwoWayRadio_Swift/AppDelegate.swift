@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let infoDic = NSBundle.mainBundle().infoDictionary
-        print(infoDic)
+//        print(infoDic)
         
         //友盟统计
         MobClick.startWithAppkey("563edf19e0f55ae9e0001f06")
