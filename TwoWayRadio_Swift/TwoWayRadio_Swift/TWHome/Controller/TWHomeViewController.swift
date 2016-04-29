@@ -17,9 +17,17 @@ class TWHomeViewController: UIViewController {
         
         let homeAccountView = NSBundle.mainBundle().loadNibNamed("TWHomeAccountView", owner:nil, options:nil).first as! TWHomeAccountView
         homeAccountView.frame = self.view.frame
-        homeAccountView.y = 64 + 20
-        
+        homeAccountView.y = 64
+        homeAccountView.height = 200
         self.view.addSubview(homeAccountView)
+        
+        var  radioBtn = UIButton.init(type: UIButtonType.Custom)
+        radioBtn.frame = CGRectMake(0, 300, 200, 100)
+        radioBtn.centerY = UIScreen.mainScreen().bounds.height / 2
+        radioBtn.centerX = UIScreen.mainScreen().bounds.width / 2
+        radioBtn.setImage(UIImage.init(named: "applicationIcon"), forState: UIControlState.Normal)
+        
+        self.view.addSubview(radioBtn)
         
         // Do any additional setup after loading the view.
     }

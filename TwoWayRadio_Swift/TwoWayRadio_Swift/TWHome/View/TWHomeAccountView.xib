@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0D-1x-kET">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_people" translatesAutoresizingMaskIntoConstraints="NO" id="l0D-1x-kET">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="90" id="1De-Dg-eKe"/>
@@ -30,7 +30,7 @@
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXN-Yf-k53">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXN-Yf-k53">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,22 +42,23 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-gY-GWe">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="点击连接"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.65490196079999996" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="l0D-1x-kET" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7n7-Ji-WdY"/>
                 <constraint firstItem="h6e-gY-GWe" firstAttribute="centerY" secondItem="l0D-1x-kET" secondAttribute="centerY" id="LFa-IM-4zb"/>
                 <constraint firstItem="h6e-gY-GWe" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="354" id="Ygp-5P-WmU">
                     <variation key="widthClass=compact" constant="-20"/>
                 </constraint>
                 <constraint firstItem="LXN-Yf-k53" firstAttribute="leading" secondItem="l0D-1x-kET" secondAttribute="trailing" constant="20" id="bEn-jd-FXD"/>
-                <constraint firstItem="l0D-1x-kET" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="peR-e6-JBw"/>
                 <constraint firstItem="tHZ-ND-J3i" firstAttribute="bottom" secondItem="l0D-1x-kET" secondAttribute="bottom" id="q5T-Qx-rW8"/>
                 <constraint firstItem="tHZ-ND-J3i" firstAttribute="leading" secondItem="LXN-Yf-k53" secondAttribute="leading" id="uqv-Em-UXQ"/>
                 <constraint firstItem="LXN-Yf-k53" firstAttribute="top" secondItem="l0D-1x-kET" secondAttribute="top" id="w1F-kc-in9"/>
                 <constraint firstItem="l0D-1x-kET" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="xR0-UA-mLg"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="l0D-1x-kET"/>
@@ -68,12 +69,12 @@
                 <mask key="constraints">
                     <exclude reference="LFa-IM-4zb"/>
                     <exclude reference="Ygp-5P-WmU"/>
-                    <exclude reference="peR-e6-JBw"/>
-                    <exclude reference="xR0-UA-mLg"/>
-                    <exclude reference="bEn-jd-FXD"/>
-                    <exclude reference="w1F-kc-in9"/>
                     <exclude reference="q5T-Qx-rW8"/>
                     <exclude reference="uqv-Em-UXQ"/>
+                    <exclude reference="bEn-jd-FXD"/>
+                    <exclude reference="w1F-kc-in9"/>
+                    <exclude reference="7n7-Ji-WdY"/>
+                    <exclude reference="xR0-UA-mLg"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -86,12 +87,12 @@
                 <mask key="constraints">
                     <include reference="LFa-IM-4zb"/>
                     <include reference="Ygp-5P-WmU"/>
-                    <include reference="peR-e6-JBw"/>
-                    <include reference="xR0-UA-mLg"/>
-                    <include reference="bEn-jd-FXD"/>
-                    <include reference="w1F-kc-in9"/>
                     <include reference="q5T-Qx-rW8"/>
                     <include reference="uqv-Em-UXQ"/>
+                    <include reference="bEn-jd-FXD"/>
+                    <include reference="w1F-kc-in9"/>
+                    <include reference="7n7-Ji-WdY"/>
+                    <include reference="xR0-UA-mLg"/>
                 </mask>
             </variation>
             <connections>
@@ -100,6 +101,10 @@
                 <outlet property="accountStatusBtn" destination="tHZ-ND-J3i" id="HmC-Yx-JC1"/>
                 <outlet property="connectBtn" destination="h6e-gY-GWe" id="ISn-dJ-ou4"/>
             </connections>
+            <point key="canvasLocation" x="460" y="277"/>
         </view>
     </objects>
+    <resources>
+        <image name="home_people" width="60" height="60"/>
+    </resources>
 </document>
